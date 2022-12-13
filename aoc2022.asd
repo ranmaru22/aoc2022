@@ -5,7 +5,7 @@
   :depends-on (#:alexandria
                #:uiop
                #:cl-ppcre
-               #:split-sequence)
+               #:str)
   :components ((:file "package")
                (:module "src"
                 :components
