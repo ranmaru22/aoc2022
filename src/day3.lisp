@@ -1,10 +1,11 @@
-(defpackage :aoc2022-day3
-  (:use :cl))
+(defpackage #:aoc2022-day3
+  (:nicknames #:day3)
+  (:use #:cl))
 
-(in-package :aoc2022-day3)
+(in-package #:aoc2022-day3)
 
 (defun read-items ()
-  (with-open-file (in "./day3.in")
+  (with-open-file (in "./input/day3.in")
     (do ((line (read-line in nil 'eof) (read-line in nil 'eof))
          (ret nil))
         ((eq line 'eof) ret)
