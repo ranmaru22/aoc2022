@@ -1,7 +1,8 @@
-(defpackage :aoc2022-day4
-  (:use :cl :cl-ppcre))
+(defpackage #:aoc2022-day4
+  (:nicknames #:day4)
+  (:use #:cl #:cl-ppcre))
 
-(in-package :aoc2022-day4)
+(in-package #:aoc2022-day4)
 
 (defun get-pairs (line)
   (ppcre:register-groups-bind (x1 x2 y1 y2)
@@ -10,7 +11,7 @@
             (list x1 x2 y1 y2))))
 
 (defun read-pairs ()
-  (with-open-file (in "./day4.in")
+  (with-open-file (in "./input/day4.in")
     (do ((line (read-line in nil 'eof) (read-line in nil 'eof))
          (ret))
         ((eq line 'eof) ret)

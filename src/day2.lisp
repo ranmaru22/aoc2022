@@ -1,10 +1,11 @@
-(defpackage :aoc2022-day2
-  (:use :cl))
+(defpackage #:aoc2022-day2
+  (:nicknames #:day2)
+  (:use #:cl))
 
-(in-package :aoc2022-day2)
+(in-package #:aoc2022-day2)
 
 (defun get-strategy ()
-  (with-open-file (in "./day2.in")
+  (with-open-file (in "./input/day2.in")
     (do ((line (read-line in nil 'eof) (read-line in nil 'eof))
          (ret nil))
         ((eq line 'eof) ret)

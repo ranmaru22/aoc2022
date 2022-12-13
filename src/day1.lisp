@@ -1,10 +1,11 @@
-(defpackage :aoc2022-day1
-  (:use :cl))
+(defpackage #:aoc2022-day1
+  (:nicknames #:day1)
+  (:use #:cl))
 
-(in-package :aoc2022-day1)
+(in-package #:aoc2022-day1)
 
 (defun get-calories-list ()
-  (with-open-file (in "./day1.in")
+  (with-open-file (in "./input/day1.in")
     (mapcar
      (lambda (elf) (reduce #'+ elf))
 
